@@ -71,7 +71,7 @@ function App() {
     <div className="App">
       {/* NAVBAR */}
       <nav className="navbar">
-        <div className="nav-logo">Export & Import Co.</div>
+        <div className="nav-logo"><span className="logo-accent">◆</span> Export &amp; Import Co.</div>
         <ul className="nav-links">
           <li>
             <button className={activePage === 'home' ? 'nav-btn active' : 'nav-btn'} onClick={() => setActivePage('home')}>
@@ -104,8 +104,10 @@ function App() {
           <div className="home-container">
             <div className="hero-banner">
               <div className="hero-overlay">
+                <span className="hero-tag">🌿 Karnataka's Finest Agro Exports</span>
                 <h1>Welcome to Our Premium Agro Exports</h1>
                 <p>Bridging traditional organic farming with next-generation digital technology for global trade excellence.</p>
+                <button className="hero-cta-btn" onClick={() => setActivePage('products')}>Explore Our Products →</button>
               </div>
             </div>
 <section className="company-vision-section">
@@ -166,41 +168,62 @@ function App() {
             <div className="products-container">
               
               <div className="product-card">
-                <div className="slider-container">
-                  <button className="slider-btn prev" onClick={prevFingerSlide}>&#10094;</button>
-                  <img src={turmericSliderImages[currentFingerSlide]} alt="Turmeric Fingers" className="product-image" />
-                  <button className="slider-btn next" onClick={nextFingerSlide}>&#10095;</button>
+                <div className="slider-wrapper">
+                  <div className="slider-container">
+                    <button className="slider-btn prev" onClick={prevFingerSlide}>&#10094;</button>
+                    <img src={turmericSliderImages[currentFingerSlide]} alt="Turmeric Fingers" className="product-image" />
+                    <button className="slider-btn next" onClick={nextFingerSlide}>&#10095;</button>
+                  </div>
+                  <div className="slider-dots">
+                    {turmericSliderImages.map((_, i) => (
+                      <span key={i} className={`dot${i === currentFingerSlide ? ' active' : ''}`} onClick={() => setCurrentFingerSlide(i)} />
+                    ))}
+                  </div>
                 </div>
                 <div className="product-details">
                   <h3 className="product-name">Turmeric Fingers</h3>
                   <p className="product-desc">Pure, crunchy, golden-yellow dried turmeric fingers featuring optimal curcumin content.</p>
-                  <button className="btn" onClick={() => setActivePage('contact')}>Inquire Now</button>
+                  <button className="btn" onClick={() => setActivePage('contact')}>Inquire Now →</button>
                 </div>
               </div>
 
               <div className="product-card">
-                <div className="slider-container">
-                  <button className="slider-btn prev" onClick={prevPowderSlide}>&#10094;</button>
-                  <img src={turmericPowderSliderImages[currentPowderSlide]} alt="Turmeric Powder" className="product-image" />
-                  <button className="slider-btn next" onClick={nextPowderSlide}>&#10095;</button>
+                <div className="slider-wrapper">
+                  <div className="slider-container">
+                    <button className="slider-btn prev" onClick={prevPowderSlide}>&#10094;</button>
+                    <img src={turmericPowderSliderImages[currentPowderSlide]} alt="Turmeric Powder" className="product-image" />
+                    <button className="slider-btn next" onClick={nextPowderSlide}>&#10095;</button>
+                  </div>
+                  <div className="slider-dots">
+                    {turmericPowderSliderImages.map((_, i) => (
+                      <span key={i} className={`dot${i === currentPowderSlide ? ' active' : ''}`} onClick={() => setCurrentPowderSlide(i)} />
+                    ))}
+                  </div>
                 </div>
                 <div className="product-details">
                   <h3 className="product-name">Turmeric Powder</h3>
                   <p className="product-desc">Finely ground, aromatic, and rich turmeric powder processed under strict hygienic conditions.</p>
-                  <button className="btn" onClick={() => setActivePage('contact')}>Inquire Now</button>
+                  <button className="btn" onClick={() => setActivePage('contact')}>Inquire Now →</button>
                 </div>
               </div>
 
               <div className="product-card">
-                <div className="slider-container">
-                  <button className="slider-btn prev" onClick={prevRiceSlide}>&#10094;</button>
-                  <img src={riceSliderImages[currentRiceSlide]} alt="Premium Rice" className="product-image" />
-                  <button className="slider-btn next" onClick={nextRiceSlide}>&#10095;</button>
+                <div className="slider-wrapper">
+                  <div className="slider-container">
+                    <button className="slider-btn prev" onClick={prevRiceSlide}>&#10094;</button>
+                    <img src={riceSliderImages[currentRiceSlide]} alt="Premium Rice" className="product-image" />
+                    <button className="slider-btn next" onClick={nextRiceSlide}>&#10095;</button>
+                  </div>
+                  <div className="slider-dots">
+                    {riceSliderImages.map((_, i) => (
+                      <span key={i} className={`dot${i === currentRiceSlide ? ' active' : ''}`} onClick={() => setCurrentRiceSlide(i)} />
+                    ))}
+                  </div>
                 </div>
                 <div className="product-details">
                   <h3 className="product-name">Premium Rice</h3>
                   <p className="product-desc">High-quality long-grain aromatic rice, cleaned and packed meticulously for export.</p>
-                  <button className="btn" onClick={() => setActivePage('contact')}>Inquire Now</button>
+                  <button className="btn" onClick={() => setActivePage('contact')}>Inquire Now →</button>
                 </div>
               </div>
 
