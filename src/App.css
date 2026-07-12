@@ -800,37 +800,187 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- RESPONSIVE MODAL STYLES --- */
+/* ==========================================================================
+   8. RESPONSIVE — TABLET & MOBILE
+   ========================================================================== */
 
-/* Base styling (already exists, but ensures responsiveness) */
-.inline-form-box {
-  width: 90%; 
-  max-width: 450px; /* Perfect for Laptops/Desktops */
-  padding: 35px;
-}
+/* ---- Tablet (≤ 900px) ---- */
+@media (max-width: 900px) {
+  /* Navbar */
+  .navbar {
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .nav-links {
+    gap: 16px;
+  }
 
-/* Tablet view (Screens smaller than 768px) */
-@media (max-width: 768px) {
-  .inline-form-box {
-    width: 85%;
-    padding: 25px;
+  /* Hero */
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+  .hero-overlay p {
+    font-size: 1.1rem;
+  }
+
+  /* Home sections */
+  .home-details-section {
+    padding: 50px 20px;
+  }
+  .home-details-section h2 {
+    font-size: 1.9rem;
+  }
+
+  /* Products — allow wrapping */
+  .products-container {
+    flex-wrap: wrap;
+    overflow-x: unset;
+  }
+  .product-card {
+    flex: 1 1 280px;
+    max-width: 100%;
+  }
+
+  /* Certifications */
+  .certifications-page-wrapper {
+    padding: 60px 16px 80px 16px;
+  }
+  .certs-header h2 {
+    font-size: 2rem;
+  }
+
+  /* Contact */
+  .contact-page-wrapper {
+    padding: 60px 16px 80px 16px;
+  }
+  .contact-header h2 {
+    font-size: 2rem;
+  }
+  .contact-split-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-info-panel,
+  .contact-form-panel {
+    min-width: unset;
+    width: 100%;
   }
 }
 
-/* Mobile view (Screens smaller than 480px) */
+/* ---- Mobile (≤ 480px) ---- */
 @media (max-width: 480px) {
-  .inline-form-box {
-    width: 95%; /* Takes up most of the phone screen */
-    padding: 20px;
-    border-radius: 12px;
+  /* Navbar */
+  .navbar {
+    padding: 12px 16px;
+  }
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    gap: 10px;
+  }
+  .nav-btn {
+    font-size: 0.88rem;
   }
 
-  .form-actions {
-    flex-direction: column; /* Stacks buttons vertically on phones */
+  /* Hero */
+  .hero-banner {
+    height: 300px;
   }
-  
-  .inline-form-box h3 {
-    font-size: 1.2rem;
+  .hero-overlay h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  .hero-overlay p {
+    font-size: 0.95rem;
+  }
+
+  /* Home sections */
+  .home-details-section {
+    padding: 36px 16px;
+  }
+  .home-details-section h2 {
+    font-size: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .features-grid {
+    gap: 20px;
+  }
+  .feature-card {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Info strip */
+  .info-strip {
+    flex-direction: column;
+    gap: 20px;
+    padding: 28px 16px;
+    margin-top: 30px;
+  }
+
+  /* Products */
+  .products-container {
+    padding: 36px 16px;
+    gap: 20px;
+  }
+  .product-card {
+    flex: 1 1 100%;
+  }
+  .products-bottom-section {
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+  .products-bottom-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+  .step-card {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Certifications */
+  .certifications-page-wrapper {
+    padding: 40px 16px 60px 16px;
+  }
+  .certs-header h2 {
+    font-size: 1.6rem;
+  }
+  .certs-header p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .cert-badge-card {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Contact */
+  .contact-page-wrapper {
+    padding: 40px 16px 60px 16px;
+  }
+  .contact-header h2 {
+    font-size: 1.6rem;
+  }
+  .contact-header p {
+    font-size: 1rem;
+  }
+  .contact-form-panel {
+    padding: 24px 16px;
+  }
+  .form-row-two {
+    flex-direction: column;
+  }
+  .company-vision-section {
+    padding: 40px 16px;
   }
 }
 .company-vision-section {
