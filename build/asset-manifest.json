@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.10d516e5.css",
+    "main.js": "/static/js/main.e443b9a3.js",
+    "static/js/453.af3315fc.chunk.js": "/static/js/453.af3315fc.chunk.js",
+    "static/media/turmeric-powder-5.jpeg": "/static/media/turmeric-powder-5.6b85d70f3013bd0c6e1a.jpeg",
+    "static/media/rice-3.jpeg": "/static/media/rice-3.433e65739203d685188a.jpeg",
+    "static/media/rice-5.jpeg": "/static/media/rice-5.8690e2166a054f8a6579.jpeg",
+    "static/media/turmeric-powder-1.jpeg": "/static/media/turmeric-powder-1.cfb1f9f53c3e1466e7b0.jpeg",
+    "static/media/turmeric-fingers-2.jpeg": "/static/media/turmeric-fingers-2.72e4bf9c78da232cebc2.jpeg",
+    "static/media/rice-2.jpeg": "/static/media/rice-2.18135d5937c1dc0a515f.jpeg",
+    "static/media/turmeric-powder-3.jpeg": "/static/media/turmeric-powder-3.b3289c4f881972e82d86.jpeg",
+    "static/media/turmeric-fingers-4.jpg": "/static/media/turmeric-fingers-4.09dda8ed5f7717717654.jpg",
+    "static/media/turmeric-powder-2.jpeg": "/static/media/turmeric-powder-2.15ae34a6d45cdb9d9c76.jpeg",
+    "static/media/turmeric-fingers-3.jpeg": "/static/media/turmeric-fingers-3.80944fb49c35168b2799.jpeg",
+    "static/media/turmeric-fingers-1.jpeg": "/static/media/turmeric-fingers-1.587ce4ca44f9a9ab8a30.jpeg",
+    "static/media/turmeric-fingers-5.jpeg": "/static/media/turmeric-fingers-5.2943b55ccac072c0060c.jpeg",
+    "static/media/rice-1.jpeg": "/static/media/rice-1.17afaa421934b04f0797.jpeg",
+    "static/media/rice-4.jpeg": "/static/media/rice-4.c2ff0bd780745e5034d7.jpeg",
+    "static/media/turmeric-powder-4.jpeg": "/static/media/turmeric-powder-4.6696392741c1aad8394b.jpeg",
+    "index.html": "/index.html",
+    "main.10d516e5.css.map": "/static/css/main.10d516e5.css.map",
+    "main.e443b9a3.js.map": "/static/js/main.e443b9a3.js.map",
+    "453.af3315fc.chunk.js.map": "/static/js/453.af3315fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10d516e5.css",
+    "static/js/main.e443b9a3.js"
+  ]
+}

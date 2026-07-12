@@ -39,4 +39,5 @@ externalPort = 3000
 
 [deployment]
 deploymentTarget = "static"
-publicDir = "public"
+publicDir = "build"
+build = ["npm", "run", "build"]
