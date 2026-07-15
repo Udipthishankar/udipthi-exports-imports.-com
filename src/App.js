@@ -365,90 +365,155 @@ function App() {
           </div>
         )}
 
-        {/* CONTACT PAGE WITH CREATIVE DETAILS & FORM INTERACTION */}
+        {/* CONTACT PAGE */}
         {activePage === 'contact' && (
           <div className="contact-page-wrapper">
-            <div className="contact-bg-glow">
-              <div className="glow-sphere left-glow"></div>
-              <div className="glow-sphere right-glow"></div>
+
+            {/* Hero Banner */}
+            <div className="contact-hero">
+              <div className="contact-hero-inner">
+                <span className="contact-hero-tag">🌍 Global Partnerships</span>
+                <h2>Let's Trade Together</h2>
+                <p>Ready to source premium turmeric or rice for your market? Our export desk responds within 4 business hours.</p>
+                <div className="contact-hero-badges">
+                  <span className="hero-badge">⚡ Fast Response</span>
+                  <span className="hero-badge">🔒 Secure Inquiries</span>
+                  <span className="hero-badge">🌐 Global Shipping</span>
+                </div>
+              </div>
             </div>
 
-            <header className="contact-header">
-              <span className="contact-tag">Global Partnerships</span>
-              <h2>Contact Our Export Division</h2>
-              <p>Have questions or ready to place a bulk inquiry? Reach out directly or dispatch a dynamic message instantly.</p>
-            </header>
+            {/* Quick-stat strip */}
+            <div className="contact-stat-strip">
+              <div className="contact-stat">
+                <strong>4 hrs</strong>
+                <span>Avg. Response Time</span>
+              </div>
+              <div className="contact-stat">
+                <strong>50+</strong>
+                <span>Countries Served</span>
+              </div>
+              <div className="contact-stat">
+                <strong>100%</strong>
+                <span>Export Certified</span>
+              </div>
+              <div className="contact-stat">
+                <strong>24/7</strong>
+                <span>WhatsApp Support</span>
+              </div>
+            </div>
 
-            <div className="contact-split-container">
-              {/* Left Column: Core Infrastructure Detail Cards */}
+            {/* Main content */}
+            <div className="contact-body">
+
+              {/* Left — Info Cards */}
               <div className="contact-info-panel">
-                <div className="info-glass-card">
-                  <div className="info-icon-wrapper">✉️</div>
-                  <div className="info-text-box">
-                    <label>Direct Email</label>
-                    <p className="info-value">exports@gmail.com</p>
+                <h3 className="info-panel-title">Reach Us Directly</h3>
+
+                <div className="info-card info-card--orange">
+                  <div className="info-card-icon">✉️</div>
+                  <div className="info-card-text">
+                    <label>Email Us</label>
+                    <p>exports@gmail.com</p>
+                    <span className="info-card-hint">For bulk inquiries & quotes</span>
                   </div>
                 </div>
 
-                <div className="info-glass-card">
-                  <div className="info-icon-wrapper">📞</div>
-                  <div className="info-text-box">
-                    <label>Hotline Support</label>
-                    <p className="info-value">+91 63643 59105</p>
+                <div className="info-card info-card--green">
+                  <div className="info-card-icon">📞</div>
+                  <div className="info-card-text">
+                    <label>Call / WhatsApp</label>
+                    <p>+91 63643 59105</p>
+                    <span className="info-card-hint">Mon – Sat, 9 AM – 7 PM IST</span>
                   </div>
                 </div>
 
-                <div className="info-glass-card">
-                  <div className="info-icon-wrapper">📍</div>
-                  <div className="info-text-box">
-                    <label>Office Location</label>
-                    <p className="info-value">Bengaluru, Karnataka, India</p>
+                <div className="info-card info-card--blue">
+                  <div className="info-card-icon">📍</div>
+                  <div className="info-card-text">
+                    <label>Headquarters</label>
+                    <p>Bengaluru, Karnataka</p>
+                    <span className="info-card-hint">India — Export Hub</span>
                   </div>
+                </div>
+
+                <div className="info-card info-card--purple">
+                  <div className="info-card-icon">🕐</div>
+                  <div className="info-card-text">
+                    <label>Business Hours</label>
+                    <p>Mon – Sat: 9 AM – 7 PM</p>
+                    <span className="info-card-hint">IST (UTC +5:30)</span>
+                  </div>
+                </div>
+
+                {/* Trust badges */}
+                <div className="contact-trust-row">
+                  <span className="trust-badge">🛡️ APEDA</span>
+                  <span className="trust-badge">✅ ISO 22000</span>
+                  <span className="trust-badge">🏷️ FSSAI</span>
                 </div>
               </div>
 
-              {/* Right Column: Interactive Secure Form Entry */}
+              {/* Right — Form */}
               <div className="contact-form-panel">
                 {!formSubmitted ? (
-                  <form className="interactive-form" onSubmit={(e) => { e.preventDefault(); setFormSubmitted(true); }}>
-                    <div className="form-row-two">
-                      <div className="input-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="John Doe" required />
+                  <>
+                    <div className="form-panel-header">
+                      <h3>Send an Inquiry</h3>
+                      <p>Fill in the details below and our export team will get back to you shortly.</p>
+                    </div>
+                    <form className="interactive-form" onSubmit={(e) => { e.preventDefault(); setFormSubmitted(true); }}>
+                      <div className="form-row-two">
+                        <div className="input-group">
+                          <label>Your Name</label>
+                          <input type="text" placeholder="John Doe" required />
+                        </div>
+                        <div className="input-group">
+                          <label>Corporate Email</label>
+                          <input type="email" placeholder="john@company.com" required />
+                        </div>
                       </div>
+
                       <div className="input-group">
-                        <label>Corporate Email</label>
-                        <input type="email" placeholder="john@company.com" required />
+                        <label>Target Country / Port of Destination</label>
+                        <input type="text" placeholder="e.g. Rotterdam, Netherlands" required />
                       </div>
-                    </div>
 
-                    <div className="input-group">
-                      <label>Target Country / Port of Destination</label>
-                      <input type="text" placeholder="e.g. Rotterdam, Netherlands" required />
-                    </div>
+                      <div className="input-group">
+                        <label>Product & Volume Required</label>
+                        <input type="text" placeholder="e.g. 5 MT Turmeric Fingers" required />
+                      </div>
 
-                    <div className="input-group">
-                      <label>Requirement Details</label>
-                      <textarea rows="4" placeholder="Specify expected volumes (e.g. 5 Metric Tons of Turmeric)..." required></textarea>
-                    </div>
+                      <div className="input-group">
+                        <label>Additional Message</label>
+                        <textarea rows="3" placeholder="Packaging preference, certifications needed, delivery timeline..."></textarea>
+                      </div>
 
-                    <button type="submit" className="form-submit-btn">
-                      <span>Transmit Secure Inquiry</span>
-                      <span className="btn-arrow">→</span>
-                    </button>
-                  </form>
+                      <button type="submit" className="form-submit-btn">
+                        <span>Send Inquiry</span>
+                        <span className="btn-arrow">→</span>
+                      </button>
+                    </form>
+                  </>
                 ) : (
                   <div className="form-success-card">
-                    <div className="success-check-circle">✓</div>
-                    <h3>Inquiry Dispatched Successfully!</h3>
-                    <p>Your secure routing inquiry ticket has been generated. Our global logistics desk will connect via <strong>exports@gmail.com</strong> within 4 business hours.</p>
-                    <button className="reset-form-btn" onClick={() => setFormSubmitted(false)}>Submit Another Request</button>
+                    <div className="success-animation">
+                      <div className="success-ring"></div>
+                      <div className="success-check-circle">✓</div>
+                    </div>
+                    <h3>Inquiry Sent!</h3>
+                    <p>Thank you for reaching out. Our export team will contact you at your provided email within <strong>4 business hours</strong>.</p>
+                    <div className="success-info-row">
+                      <span>📧 exports@gmail.com</span>
+                      <span>📞 +91 63643 59105</span>
+                    </div>
+                    <button className="reset-form-btn" onClick={() => setFormSubmitted(false)}>Submit Another Inquiry</button>
                   </div>
                 )}
               </div>
+
             </div>
           </div>
-
         )}
 
       </main>
