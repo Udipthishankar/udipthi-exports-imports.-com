@@ -125,38 +125,61 @@ function App() {
               <p className="section-subtitle">We don't just export products; we maintain absolute transparency and standard quality control from farm to container.</p>
               
               <div className="features-grid">
-                <div className="feature-card">
-                  <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=500&q=80" alt="Smart Agriculture" className="feature-img" />
-                  <h3>Smart Sourcing</h3>
-                  <p>Our farming infrastructure incorporates modern IoT methods and real-time smart monitoring solutions to closely track crop health and ensure premium quality metrics before harvest.</p>
+                <div className="feature-card feature-card--orange">
+                  <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=90" alt="Smart Agriculture" className="feature-img" />
+                  <div className="feature-card-body">
+                    <span className="feature-label">🌱 Farm to Fork</span>
+                    <h3>Smart Sourcing</h3>
+                    <p>Our farming infrastructure incorporates modern IoT methods and real-time smart monitoring solutions to closely track crop health and ensure premium quality metrics before harvest.</p>
+                  </div>
                 </div>
 
-                <div className="feature-card">
-                  <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=500&q=80" alt="Processing" className="feature-img" />
-                  <h3>Hygienic Processing</h3>
-                  <p>Every batch of Turmeric and Rice is processed in state-of-the-art facilities complying strictly with global export standards, retaining natural color, high curcumin levels, and deep rich aroma.</p>
+                <div className="feature-card feature-card--green">
+                  <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=90" alt="Processing" className="feature-img" />
+                  <div className="feature-card-body">
+                    <span className="feature-label">✨ Zero Contamination</span>
+                    <h3>Hygienic Processing</h3>
+                    <p>Every batch of Turmeric and Rice is processed in state-of-the-art facilities complying strictly with global export standards, retaining natural color, high curcumin levels, and deep rich aroma.</p>
+                  </div>
                 </div>
 
-                <div className="feature-card">
-                  <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=500&q=80" alt="Global Shipping" className="feature-img" />
-                  <h3>Global Supply Chain</h3>
-                  <p>Operating directly out of the technology hub of Bengaluru, Karnataka, we manage a streamlined international supply infrastructure ensuring swift and seamless customs transit.</p>
+                <div className="feature-card feature-card--blue">
+                  <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=90" alt="Global Shipping" className="feature-img" />
+                  <div className="feature-card-body">
+                    <span className="feature-label">🌍 Worldwide Reach</span>
+                    <h3>Global Supply Chain</h3>
+                    <p>Operating directly out of the technology hub of Bengaluru, Karnataka, we manage a streamlined international supply infrastructure ensuring swift and seamless customs transit.</p>
+                  </div>
                 </div>
               </div>
             </section>
 
             <div className="info-strip">
               <div className="stat-item">
+                <div className="stat-icon">🌱</div>
                 <strong>100%</strong>
                 <span>Traceable Sourcing</span>
               </div>
               <div className="stat-item">
+                <div className="stat-icon">🏆</div>
                 <strong>Premium</strong>
                 <span>Curcumin Standard</span>
               </div>
               <div className="stat-item">
+                <div className="stat-icon">🌍</div>
                 <strong>Bengaluru HQ</strong>
                 <span>Strategic Logistics Hub</span>
+              </div>
+            </div>
+
+            <div className="harvest-banner">
+              <div className="harvest-banner-overlay">
+                <div className="harvest-banner-content">
+                  <span className="harvest-tag">🌾 Karnataka's Golden Harvest</span>
+                  <h2>Rooted in Tradition. Powered by Technology.</h2>
+                  <p>For generations, Karnataka's rich volcanic soil has yielded the world's finest turmeric. We unite that heritage with modern precision to bring you export-grade purity.</p>
+                  <button className="harvest-cta" onClick={() => setActivePage('certifications')}>View Our Certifications →</button>
+                </div>
               </div>
             </div>
           </div>
@@ -165,6 +188,15 @@ function App() {
         {/* PRODUCTS PAGE */}
         {activePage === 'products' && (
           <div className="products-page-wrapper">
+
+            <div className="products-page-hero">
+              <div className="products-hero-overlay">
+                <span className="products-hero-tag">🌿 Certified for Global Export</span>
+                <h2>Our Premium Products</h2>
+                <p>Sourced from Karnataka's finest farms — processed with care, packed with purity, certified for the world.</p>
+              </div>
+            </div>
+
             <div className="products-container">
               
               <div className="product-card">
@@ -255,16 +287,20 @@ function App() {
         {/* CERTIFICATIONS PAGE */}
         {activePage === 'certifications' && (
           <div className="certifications-page-wrapper">
+
+            <div className="certs-hero">
+              <div className="certs-hero-inner">
+                <span className="badge-tag">🏅 Verified Compliance</span>
+                <h2>International Quality Frameworks</h2>
+                <p>We actively satisfy rigorous verification standards to deliver authenticated food products safely across global supply chains.</p>
+              </div>
+            </div>
+
+            <div className="certs-body">
             <div className="certs-bg-shapes">
               <div className="shape bubble-left"></div>
               <div className="shape bubble-right"></div>
             </div>
-
-            <header className="certs-header">
-              <span className="badge-tag">Verified Compliance</span>
-              <h2>International Quality Frameworks</h2>
-              <p>We actively satisfy rigorous verification standards to deliver authenticated food products safely across global supply chains.</p>
-            </header>
 
             <div className="certs-grid">
               
@@ -325,6 +361,7 @@ function App() {
               <span className="pulse-dot"></span>
               <p>All compliance metrics are real-time integrated via international agricultural trade databases.</p>
             </div>
+            </div>{/* /certs-body */}
           </div>
         )}
 
